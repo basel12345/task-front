@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="pages/users" routerLinkActive='active' *ngIf="token">User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="pages/devices" routerLinkActive='active' *ngIf="token">All Devices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="pages/my-devices" routerLinkActive='active' *ngIf="token">My Devices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="core/register" routerLinkActive='active' *ngIf="!token">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="core/login" routerLinkActive='active' *ngIf="!token">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="core/login" routerLinkActive='active' *ngIf="token" (click)="logOut()">Log Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>

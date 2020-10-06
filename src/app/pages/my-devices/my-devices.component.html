@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of MyDevices">
+        <th>{{res.name}}</th>
+        <th>{{res.price}}</th>
+        <th>{{res.description}}</th>
+        <th>
+          <button type="button" class="btn btn-primary" *ngIf="!res.price" (click)="addData(res._id)">Add Data</button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
